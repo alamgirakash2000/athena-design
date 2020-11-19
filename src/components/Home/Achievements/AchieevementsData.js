@@ -1,7 +1,6 @@
 const fakeData = [
     {
         id : 1,
-        // img : 'https://i.ibb.co/CK49xc8/achieevements1.png',
         img : 'https://i.ibb.co/09S8bgb/achieevements2.png',
         num : '700+',
         title : 'Happy Clients'
