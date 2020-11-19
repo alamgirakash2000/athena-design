@@ -3,7 +3,6 @@ import Achievements from '../Achievements/Achievements';
 import Header from '../Header/Header';
 import RunProject from '../RunProject/RunProject';
 import Store from '../Store/Store';
-
 const Home = () => {
     return (
         <main>

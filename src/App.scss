@@ -8,7 +8,10 @@ $whiteColor : #ffffff;
     border-radius: 20px 0px 20px 0px !important;
     font-weight: 500 !important;
 }
-
+@mixin  hiddenStyle {
+    overflow: hidden;
+    box-sizing: border-box;
+}
 //sonjoybarmon NavBar Menu
 .Menu{
     font-size: 18px;
@@ -36,12 +39,11 @@ $whiteColor : #ffffff;
     .row{
         padding: 50px 0;
         .heroInfo{
-            overflow: hidden;
-            box-sizing: border-box;
+            @include hiddenStyle;
             #heroTitle{
                 font-size: 106px;
                 line-height: 106px;
-                color: #0d052e;
+                color: #634fb3;
                 font-weight: 400;
             }
             p{
@@ -52,8 +54,7 @@ $whiteColor : #ffffff;
                 color: #8d8d8d;
                 font-weight: 400;
                 margin: 20px 0;
-                overflow: hidden;
-                box-sizing: border-box;
+                @include hiddenStyle;
             }
             button{
                 @include radiusButton ;
@@ -158,7 +159,7 @@ $whiteColor : #ffffff;
         color: #707070;
     }
     &:hover{
-        transition : all 5s ease-in-out !important;
+        transition :all 1s ease-in-out !important;
         background: linear-gradient(237deg, #2af598 0%, #009efd 100%, #000000 100%);
         color : $whiteColor !important;
     }

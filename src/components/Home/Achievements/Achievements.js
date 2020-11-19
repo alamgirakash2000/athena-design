@@ -16,7 +16,7 @@ const Achievements = () => {
                     <div className="col-md-6 col-sm-12 offset-md-1">
                          <div className="row">
                              {
-                                 data.map(data => <AchievementsBox data={data}></AchievementsBox>)
+                                 data.map(data => <AchievementsBox key={data.id} data={data}></AchievementsBox>)
                              }
                          </div>   
                     </div>
