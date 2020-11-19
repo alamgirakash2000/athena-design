@@ -1,0 +1,167 @@
+$blackColor : #000000;
+$whiteColor : #ffffff;
+//sonjoybarmon button
+@mixin radiusButton {
+    background: linear-gradient(128deg, #2af598 0%, #009efd 100%) !important;
+    font-size: 18px !important;
+    color : $whiteColor !important;
+    border-radius: 20px 0px 20px 0px !important;
+    font-weight: 500 !important;
+}
+
+//sonjoybarmon NavBar Menu
+.Menu{
+    font-size: 18px;
+    margin-right: 20px;
+    padding-top: 30px;
+    color :#263f44;
+    font-weight: 500;
+    &:hover{
+        text-decoration: none;
+        color: $blackColor;
+    }
+}
+//sonjoybarmon NavBar Button
+.menu-btn{
+    @include radiusButton ;
+    height: 40px !important;
+    width: 120px !important;
+    margin-top: 20px !important;
+}
+.heroArea{
+    background : url(./images/background.jpg);
+    background-repeat: no-repeat;
+    width: 100% !important;
+    height: 100vh;
+    .row{
+        padding: 50px 0;
+        .heroInfo{
+            overflow: hidden;
+            box-sizing: border-box;
+            #heroTitle{
+                font-size: 106px;
+                line-height: 106px;
+                color: #0d052e;
+                font-weight: 400;
+            }
+            p{
+                width: 543px;
+                height: 109px;
+                font-size: 16px;
+                line-height: 30px;
+                color: #8d8d8d;
+                font-weight: 400;
+                margin: 20px 0;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+            button{
+                @include radiusButton ;
+                width: 178px;
+                height: 60px;
+            }
+        }
+    }
+}
+.store{
+    background : #FAFFFD;
+    padding: 50px 0;
+    .storeInfo{
+        p{
+            font-size: 15px;
+            line-height: 30px;
+            color: #8d8d8d;
+            font-weight: 400;
+        }
+    }
+    .store_box{
+        .store_card{
+            padding: 30px 10px;
+            margin: 50px 0;
+            border: none;
+            border-radius: 60px 0 60px 0;
+            transition: all 1s ease-in-out;
+            &:hover{
+                transition: all 1s ease-in-out;
+                background-color: $whiteColor;
+                box-shadow: 5px 5px 15px gray;
+                border : 2px solid #B2D4FF;
+            }
+            .store_img{
+                width: 115px;
+                height: 115px;
+                margin-left: 25%;
+            }
+            .store_title{
+                font-size: 20px;
+                color: #34285c;
+                font-weight: 600;
+            }
+            .store_text{
+                font-size: 16px;
+                line-height: 30px;
+                color: #8d8d8d;
+                font-weight: 400;
+            }
+        }
+        
+    }
+}
+.run-project{
+    background : #FFFFFF ;
+    padding: 50px 0;
+    .run-project-info{
+        h1{
+            color: #0d052e;
+            font-weight: 400;
+        }
+        p{
+            font-size: 15px;
+            line-height: 30px;
+            color: #8d8d8d;
+            font-weight: 400;
+            margin: 15px 0;
+        }
+        button{
+            @include radiusButton;
+            width: 178px;
+            height: 60px;
+        }
+    }
+}
+.achievement{
+    padding: 50px 0;
+    background : #FAFFFD;
+    .achievement-info{
+        p{
+            font-size: 15px;
+            line-height: 30px;
+            color: #707070;
+            font-weight: 400;
+        }
+    }
+}
+.achi-wrapper{
+    height: 150px;
+    background : $whiteColor;
+    box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.37);
+    border-radius: 50px 0 50px 0;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 20px;
+    transition: all 1s ease-in-out;
+    .achi-img{
+        width: 35%;
+    }
+    .achi-info{
+        width: 75%;
+        color: #707070;
+    }
+    &:hover{
+        transition : all 5s ease-in-out !important;
+        background: linear-gradient(237deg, #2af598 0%, #009efd 100%, #000000 100%);
+        color : $whiteColor !important;
+    }
+}
+
+
