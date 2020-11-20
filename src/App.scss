@@ -12,7 +12,6 @@ $whiteColor : #ffffff;
     overflow: hidden;
     box-sizing: border-box;
 }
-//sonjoybarmon NavBar Menu
 .Menu{
     font-size: 18px;
     margin-right: 20px;
@@ -24,7 +23,6 @@ $whiteColor : #ffffff;
         color: $blackColor;
     }
 }
-//sonjoybarmon NavBar Button
 .menu-btn{
     @include radiusButton ;
     height: 40px !important;
