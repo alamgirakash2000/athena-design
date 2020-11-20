@@ -4,14 +4,19 @@ import Header from '../Header/Header';
 import RunProject from '../RunProject/RunProject';
 import Store from '../Store/Store';
 const Home = () => {
-    return (
-        <main>
-            <Header />
-            <Store />
-            <RunProject />
-            <Achievements />
-        </main>
-    );
+  return (
+    <>
+      <Header />
+      <div className="shaireBg">
+        <Store />
+        <RunProject />
+        <Achievements />
+      </div>
+      <DedecatedTeam />
+      <Search />
+      <Footer />
+    </>
+  );
 };
 
 export default Home;
