@@ -1,6 +1,6 @@
 <h1>Athena Design </h1> <h5> -A frontent web.</h5>
    <ul> 
-	  <li> <a target="_blank" href=" https://athena-app.netlify.app/"> Live Website Link</a>
+	  <li> <a target="_blank" href="https://athena-app.netlify.app/"> Live Website Link</a>
 	  <li> <a target="_blank" href="https://github.com/alamgirakash2000/athena-design"> Client Side Code Link</a>
    </ul>
     
