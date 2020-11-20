@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer style={{backgroundColor:"#FAFFFD"}} className="mt-5 pt-5">
+    <footer style={{backgroundColor:"#FAFFFD"}} className="mt-5 pt-5 footer">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-sm-6 col-md-4 text-center text-sm-left">
-            <img style={{ width: "150px" }} src={logoFooter} alt="" />
+          <div className="col-sm-6 col-md-4 text-center text-sm-left footerLogo">
+            <img style={{ width: "130px" }} src={logoFooter} alt="" />
             <div className="socialIcon py-4">
               <ul className="d-flex w-100 justify-content-center justify-content-sm-start">
                 <li>

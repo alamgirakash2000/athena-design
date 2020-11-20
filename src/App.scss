@@ -14,7 +14,7 @@ li {
   list-style: none;
 }
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .allHeading {
   font-family: "Yeseva One", cursive;
@@ -22,64 +22,46 @@ a:hover {
   font-size: 33px;
 }
 @mixin radiusButton {
-  background: linear-gradient(128deg, #2af598 0%, #009efd 100%) !important;
-  font-size: 18px !important;
-  color: $whiteColor !important;
+  //   background: linear-gradient(128deg, #2af598 0%, #009efd 100%) !important;
+  //   font-size: 18px !important;
+  //   color: $whiteColor !important;
+  //   border-radius: 20px 0px 20px 0px !important;
+  //   font-weight: 500 !important;
+
   border-radius: 20px 0px 20px 0px !important;
-  font-weight: 500 !important;
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  background: rgb(31, 222, 179);
+  background: -moz-linear-gradient(
+    132deg,
+    rgba(31, 222, 179, 1) 20%,
+    rgba(1, 161, 249, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    132deg,
+    rgba(31, 222, 179, 1) 20%,
+    rgba(1, 161, 249, 1) 100%
+  );
+  background: linear-gradient(
+    132deg,
+    rgba(31, 222, 179, 1) 20%,
+    rgba(1, 161, 249, 1) 100%
+  );
 }
-@mixin  hiddenStyle {
-    overflow: hidden;
-    box-sizing: border-box;
+@mixin afterBefore {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  content: "";
+  position: absolute;
 }
-.Menu{
-    font-size: 18px;
-    margin-right: 20px;
-    padding-top: 30px;
-    color :#263f44;
-    font-weight: 500;
-    &:hover{
-        text-decoration: none;
-        color: $blackColor;
-    }
-}
-.menu-btn{
-    @include radiusButton ;
-    height: 40px !important;
-    width: 120px !important;
-    margin-top: 20px !important;
-}
-.heroArea{
-    background : url(./images/background.jpg);
-    background-repeat: no-repeat;
-    width: 100% !important;
-    height: 100vh;
-    .row{
-        padding: 50px 0;
-        .heroInfo{
-            @include hiddenStyle;
-            #heroTitle{
-                font-size: 106px;
-                line-height: 106px;
-                color: #634fb3;
-                font-weight: 400;
-            }
-            p{
-                width: 543px;
-                height: 109px;
-                font-size: 16px;
-                line-height: 30px;
-                color: #8d8d8d;
-                font-weight: 400;
-                margin: 20px 0;
-                @include hiddenStyle;
-            }
-            button{
-                @include radiusButton ;
-                width: 178px;
-                height: 60px;
-            }
-        }
+@mixin pathBg {
+  .store {
+    .store-Section {
+      .store_section_bg {
+        background-image: none !important;
+      }
     }
   }
 }
@@ -284,7 +266,6 @@ a:hover {
 
 //store scss
 .store {
-
   .store-Section {
     .store_section_bg {
       background-image: url("./images/Path 74.png");
@@ -298,7 +279,8 @@ a:hover {
 .store_box {
   .store_card {
     .card {
-      border: none !important;
+      // border: none !important;
+      border: 2px solid transparent!important;
       border-radius: 60px 0 60px 0;
       transition: all 1s ease-in-out;
       box-sizing: border-box;
@@ -311,7 +293,8 @@ a:hover {
         box-shadow: 5px 5px 15px rgb(207, 207, 207);
         border: 2px solid #b2d4ff !important;
         box-sizing: border-box;
-        padding: 10px;
+        
+        // padding: 10px;
       }
       .store_img {
         width: 115px;
@@ -366,10 +349,13 @@ a:hover {
       background-image: url("./images/Ellipse\ 16.png");
       height: 200px;
     }
-    &:hover{
-        transition :all 1s ease-in-out !important;
-        background: linear-gradient(237deg, #2af598 0%, #009efd 100%, #000000 100%);
-        color : $whiteColor !important;
+    &::after {
+      @include afterBefore;
+      top: -40px;
+      left: 91px;
+      width: 100%;
+      background-image: url("./images/Ellipse\ 15.png");
+      height: 120px;
     }
   }
 }
@@ -456,10 +442,80 @@ a:hover {
   button {
     color: $whiteColor;
     @include radiusButton;
+    &:hover {
+      color: $whiteColor;
+    }
   }
 }
 
+.search {
+  .searchInput {
+    padding: 10px;
+    box-shadow: 0 0 20px #d8dad9;
+    input {
+      border: none !important;
+      &:focus {
+        border: none !important;
+        outline: none !important;
+        box-shadow: 0 0 0 #7c7c7c00 !important;
+      }
+    }
+    button {
+      color: #ffffff;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      background: rgb(31, 222, 179);
+      background: -moz-linear-gradient(
+        132deg,
+        rgba(31, 222, 179, 1) 20%,
+        rgba(1, 161, 249, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        132deg,
+        rgba(31, 222, 179, 1) 20%,
+        rgba(1, 161, 249, 1) 100%
+      );
+      background: linear-gradient(
+        132deg,
+        rgba(31, 222, 179, 1) 20%,
+        rgba(1, 161, 249, 1) 100%
+      );
+    }
+    .searchInput button:hover {
+      color: #ffff;
+      background: rgb(31, 222, 179);
+      background: -moz-linear-gradient(
+        -132deg,
+        rgba(31, 222, 179, 1) 20%,
+        rgba(1, 161, 249, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        -132deg,
+        rgba(31, 222, 179, 1) 20%,
+        rgba(1, 161, 249, 1) 100%
+      );
+      background: linear-gradient(
+        -132deg,
+        rgba(31, 222, 179, 1) 20%,
+        rgba(1, 161, 249, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1fdeb3",endColorstr="#01a1f9",GradientType=1);
+    }
+  }
+}
 
+// footer scss;
+
+.footer {
+  a {
+    color: #464646 !important;
+  }
+  .socialIcon{
+    li{
+      margin-right: 20px;
+    }
+  }
+}
 
 //media queries
 @media (min-width: 768px) and (max-width: 991px) {
@@ -486,5 +542,5 @@ a:hover {
     img {
       height: 300px;
     }
-  } 
+  }
 }

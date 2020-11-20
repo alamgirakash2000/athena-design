@@ -3,7 +3,7 @@ import "./Search.css";
 
 const Search = () => {
   return (
-    <section className="mb-5">
+    <section className="mb-5 search">
       <div className="container text-center">
         <h3 className="allHeading">Get your design right, right now</h3>
         <p>Be the first know our latest offers and updates!</p>
